@@ -1,0 +1,26 @@
+.site-header {
+    position: relative;
+    padding: 20px 0;
+    z-index: 100;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-logo {
+    display: flex;
+    align-items: center;
+
+    img {
+        max-height: 48px;
+        width: 100%;
+    }
+}
+
+.header-cta {
+    display: flex;
+    gap: 15px;
+}

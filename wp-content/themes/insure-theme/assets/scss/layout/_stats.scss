@@ -1,0 +1,95 @@
+.stats-section {
+    padding: 89.5px 0;
+    position: relative;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        width: 100vw;
+        height: 2px;
+        background: linear-gradient(to right, transparent, #00ffe0, transparent);
+        transform: translateY(-50%);
+        z-index: 0;
+    }
+}
+
+.stat-card {
+    background-color: $card-color;
+    border-radius: 24px;
+    padding: 24px 16px;
+    gap: 8px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    width: 216px;
+    height: 116px;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: -9px;
+        transform: translateY(-50%);
+        width: 16px;
+        height: 16px;
+        background-color: $light-color;
+        border-radius: 50%;
+        border: 2px solid $light-color;
+        box-shadow: 0 0 20px #00ffe0, 0 0 40px #00ffe0;
+        z-index: 2;
+    }
+
+    &:first-child::before {
+        right: -40px;
+    }
+
+    &:nth-child(2) {
+        border: 1px solid rgba(0, 255, 224, 0.4);
+        background-color: $card-color;
+        box-shadow: 
+            0px 0px 0px 6px rgba(255, 255, 255, 0.06),
+            0px 19px 40px -16px rgba(115, 194, 175, 1) inset;
+
+        &::after {
+            content: '';
+            position: absolute;
+            right: -9px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 16px;
+            height: 16px;
+            background-color: $light-color;
+            border-radius: 50%;
+            box-shadow: 0 0 20px #00ffe0, 0 0 40px #00ffe0;
+            z-index: 2;
+            border: 2px solid $light-color;
+        }
+    }
+
+    &:last-child::before {
+        left: 205px;
+    }
+}
+
+.stat-value {
+    font-size: 32px;
+    line-height: 24px;
+    color: $light-color;
+    font-weight: 600;
+    margin: 0px;
+}
+
+.stat-label {
+    margin-top: 8px;
+    font-size: 12px;
+    color: $card-text-color;
+}

@@ -1,0 +1,88 @@
+.carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-slides {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-slide {
+    min-width: 100%;
+
+    img {
+        height: 100%;
+        width: 675px;
+    }
+}
+
+.carousel-controls {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.lifestyle-carousel .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.swiper-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    gap: 83px;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+    text-align: left;
+    padding-left: 80px;
+}
+
+.swiper-pagination {
+    .swiper-pagination-bullet {
+        background: rgba(202, 229, 219, 1);
+
+        &-active {
+            background: $card-text-color;
+        }
+    }
+}
+
+.custom-swiper-buttons {
+    position: absolute;
+    bottom: var(--swiper-pagination-bottom, 8px);
+    top: var(--swiper-pagination-top, auto);
+    width: 100px;
+    left: 34%;
+    right: 0;
+    display: flex;
+    justify-content: end;
+    gap: 12px;
+    z-index: 11;
+}
+
+.arrow {
+    width: 24px;
+    height: 24px;
+    position: relative;
+    background: none;
+    outline: none;
+    border: none;
+
+    i {
+        color: $light-color;
+        font-size: 16px;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}

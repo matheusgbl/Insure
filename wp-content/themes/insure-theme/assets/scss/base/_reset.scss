@@ -1,0 +1,13 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-primary;
+    color: $text-color;
+    line-height: 1.6;
+    overflow-x: hidden;
+    background-color: $primary-color;
+}
